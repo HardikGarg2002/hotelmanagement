@@ -1,0 +1,20 @@
+{
+  "name": "hotel-management",
+  "version": "1.0.0",
+  "description": "This handles listing of hotel and rooms within for customer booking",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hotelmanagement.git"
+  },
+  "author": "hardik garg",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  }
+}
