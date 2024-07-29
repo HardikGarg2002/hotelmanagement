@@ -2,12 +2,19 @@ import { ICustomer } from './customer';
 
 export interface IBooking {
 	_id?: string;
-	room_id: string;
-	customer: ICustomer;
-	check_in_date: Date;
-	check_out_date: Date;
+	room_slug: string;
+	user_id: string;
+	check_in: Date;
+	check_out: Date;
 	total_price: number;
 	status: BookingStatus;
+	guests: IGuest[];
+	booking_date: Date;
+}
+
+export interface IGuest {
+	name: string;
+	age: number;
 }
 
 export enum BookingStatus {

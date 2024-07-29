@@ -1,5 +1,6 @@
 export interface IReview {
 	_id?: string;
+	user_id: string;
 	hotel_slug: string;
 	rating: number;
 	title: string;
@@ -10,16 +11,16 @@ export interface IReview {
 }
 
 export enum ReviewerType {
-	COUPLE,
-	FAMILY,
-	SOLO,
-	BUSINESS,
-	FRIENDS,
-	GROUP,
+	COUPLE = 'COUPLE',
+	FAMILY = 'FAMILY',
+	SOLO = 'SOLO',
+	BUSINESS = 'BUSINESS',
+	FRIENDS = 'FRIENDS',
+	GROUP = 'GROUP',
 }
 
 export enum ReviewFor {
-	HOTEL,
-	ROOM,
-	RESTAURANT,
+	HOTEL = 'HOTEL',
+	ROOM = 'ROOM',
+	RESTAURANT = 'RESTAURANT',
 }
