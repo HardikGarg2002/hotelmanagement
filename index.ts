@@ -2,7 +2,7 @@ import express from 'express';
 import env from 'dotenv';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import { ConfigurationError, SystemError, ErrorHandlerMiddleware } from './src/middleware/error-middleware.ts';
+import { ConfigurationError, SystemError, ErrorHandlerMiddleware } from './src/middleware/error-middleware';
 
 env.config();
 const port = process.env.PORT || 3000;
