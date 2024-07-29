@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 const environment = process.env.ENVIRONMENT || 'local';
 const service = process.env.SERVICE || 'local';
 const MONGO_URI = process.env.MONGO_URI;
-if (!MONGO_URI || MONGO_URI == undefined) {
+if (!MONGO_URI) {
 	throw new ConfigurationError('MONGO_URI is not set in the envionment');
 }
 const app = express().use(cors()).use(express.json());
