@@ -5,8 +5,8 @@ import { ICustomer } from './customer';
 // This hotel will also work as restaurant. So, we can book a table in the hotel.
 export interface IHotel {
 	_id?: string;
-	name: string;
 	slug: string;
+	title: string;
 	desc: string;
 	address: IAddress;
 	contact_info: IContactInfo;
@@ -17,7 +17,7 @@ export interface IHotel {
 }
 
 export interface IAddress {
-	address: string;
+	street: string;
 	city: string;
 	state: string;
 	zip: string;
