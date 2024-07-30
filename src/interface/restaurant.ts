@@ -2,6 +2,7 @@ import { IContactInfo } from './hotel';
 
 export interface IRestaurant {
 	_id?: string;
+	slug: string;
 	hotel_slug: string;
 	title: string;
 	restaurant_type: RestaurantType;
