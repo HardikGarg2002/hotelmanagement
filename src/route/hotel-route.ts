@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import * as hotelHandler from '../handler/hotel-handler';
 const router = express.Router();
 
@@ -9,7 +9,7 @@ router.get('/', hotelHandler.get);
 router.post('/', hotelHandler.create);
 
 // PUT /hotels/:id
-router.put('/:id', hotelHandler.patch);
+router.patch('/:id', hotelHandler.patch);
 
 // activate or deactivate /hotels/:id
 router.delete('/:id', hotelHandler.activate);

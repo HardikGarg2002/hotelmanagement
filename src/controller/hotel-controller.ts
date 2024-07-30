@@ -1,8 +1,7 @@
-import { Request, Response } from 'express';
 import { HotelService } from '../service/hotel-service';
 import { IHotel } from '../interface/hotel';
 
-class HotelController {
+export default class HotelController {
 	private hotelService: HotelService;
 
 	constructor() {
@@ -32,5 +31,3 @@ class HotelController {
 		return await this.hotelService.activate(id);
 	};
 }
-
-export default HotelController;
