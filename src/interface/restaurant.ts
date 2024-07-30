@@ -1,6 +1,6 @@
 import { IContactInfo } from './hotel';
 
-export interface IRestaturant {
+export interface IRestaurant {
 	_id?: string;
 	hotel_slug: string;
 	title: string;
