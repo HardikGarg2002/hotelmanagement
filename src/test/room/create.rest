@@ -1,0 +1,27 @@
+@url = http://localhost:6001
+
+
+
+###
+POST {{url}}/room
+Content-Type: application/json
+
+ {
+      "slug": "itc-family-302",
+      "hotel_slug": "itc-grand-chola",
+      "room_type": "Family Suite",
+      "status": "OCCUPIED",
+      "price": 16000,
+      "amenities": ["Free WiFi", "Television", "Air Conditioning", "Room Service", "Kitchenette"],
+      "images": [
+        "https://www.example.com/images/itc-family-302-1.jpg",
+        "https://www.example.com/images/itc-family-302-2.jpg"
+      ]
+    }
+
+
+###
+GET {{url}}/home
+Content-Type: application/json
+
+
