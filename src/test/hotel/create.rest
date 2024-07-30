@@ -1,0 +1,49 @@
+@url = http://localhost:6001
+
+###
+POST {{url}}/hotel
+Content-Type: application/json
+
+{
+
+  "slug": "itc-grand-chola",
+  "title": "ITC Grand Chola",
+  "desc": "A luxurious hotel in Chennai that combines heritage with modern comforts, offering an exceptional experience.",
+  "address": {
+    "street": "No. 63, Mount Road, Guindy",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "zip": "600032",
+    "country": "India"
+  },
+  "contact_info": {
+    "phone": "+91-44-22200000",
+    "email": "reservations@itchotels.in"
+  },
+  "website": "https://www.itchotels.com",
+  "associated_branches": ["itc-grand-chola-kolkata", "itc-grand-chola-hyderabad"],
+  "images": [
+    "https://www.itchotels.com/content/dam/itchotels/in/umbrella/grandchola/images/ITCGrandChola_Main.jpg",
+    "https://www.itchotels.com/content/dam/itchotels/in/umbrella/grandchola/images/ITCGrandChola_Pool.jpg",
+    "https://www.itchotels.com/content/dam/itchotels/in/umbrella/grandchola/images/ITCGrandChola_Room.jpg"
+  ],
+  "amenities": [
+    "Free WiFi",
+    "Swimming Pool",
+    "Spa",
+    "Fitness Center",
+    "Airport Shuttle",
+    "Restaurant",
+    "Bar",
+    "Conference Rooms",
+    "Business Center",
+    "Laundry Service",
+    "Valet Parking"
+  ]
+}
+
+
+
+###
+GET {{url}}/home
+Content-Type: application/json

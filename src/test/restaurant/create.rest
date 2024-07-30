@@ -1,0 +1,41 @@
+@url = http://localhost:6001
+
+
+
+###
+POST {{url}}/restaurant
+Content-Type: application/json
+
+{
+    "slug": "leela-restaurant",
+    "hotel_slug": "the-leela-palace",
+    "title": "Leela Restaurant",
+    "restaurant_type": "RESTAURANT",
+    "contact_info": {
+      "phone": "+91-80-25211235",
+      "email": "restaurant@theleelapalace.com"
+    },
+    "images": [
+      "https://www.example.com/images/leela-restaurant-1.jpg",
+      "https://www.example.com/images/leela-restaurant-2.jpg"
+    ],
+    "opening_hours": "11:00 AM - 11:00 PM",
+    "menu": [
+      {
+        "title": "Butter Chicken",
+        "price": 800,
+        "description": "Traditional Indian chicken curry with buttery tomato gravy.",
+        "images": [
+          "https://www.example.com/images/butter-chicken.jpg"
+        ]
+      },
+      {
+        "title": "Naan",
+        "price": 100,
+        "description": "Soft and fluffy Indian flatbread.",
+        "images": [
+          "https://www.example.com/images/naan.jpg"
+        ]
+      }
+    ]
+  }
