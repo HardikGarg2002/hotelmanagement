@@ -1,8 +1,8 @@
-import { IRestaturant, RestaurantType } from '../interface/restaurant';
+import { IRestaurant, RestaurantType } from '../interface/restaurant';
 
 import mongoose, { Schema } from 'mongoose';
 
-const RestaurantSchema = new Schema<IRestaturant>({
+const RestaurantSchema = new Schema<IRestaurant>({
 	title: {
 		type: String,
 		required: true,
@@ -52,6 +52,6 @@ const RestaurantSchema = new Schema<IRestaturant>({
 	],
 });
 
-const Restaurant = mongoose.model<IRestaturant>('Restaurant', RestaurantSchema);
+const Restaurant = mongoose.model<IRestaurant>('Restaurant', RestaurantSchema);
 
 export default Restaurant;

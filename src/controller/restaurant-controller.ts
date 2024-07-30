@@ -1,5 +1,5 @@
-import { RestaurantService } from '../service/restaurant-service.js';
-import { IRestaurant } from '../interface/restaurant.js';
+import { RestaurantService } from '../service/restaurant-service';
+import { IRestaurant } from '../interface/restaurant';
 
 export default class RestaurantController {
 	private restaurantService: RestaurantService;

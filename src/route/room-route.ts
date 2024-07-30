@@ -11,3 +11,5 @@ router.post('/', roomHandler.create);
 router.patch('/:id', roomHandler.patch);
 
 router.delete('/:id', roomHandler.activate);
+
+export default router;
