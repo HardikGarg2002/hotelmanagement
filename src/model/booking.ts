@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { IBooking } from '../interface/booking';
+import { BookingStatus, IBooking } from '../interface/booking';
 
 const BookingSchema = new Schema<IBooking>({
 	room_slug: {
@@ -7,6 +7,18 @@ const BookingSchema = new Schema<IBooking>({
 		required: true,
 	},
 	user_id: { type: String },
+	date: {
+		type: Date,
+		default: Date.now,
+	},
+	total_price: {
+		type: Number,
+	},
+	status: {
+		type: String,
+		enum: Object.values(BookingStatus),
+		default: BookingStatus.PENDING,
+	},
 	check_in: {
 		type: Date,
 	},
@@ -23,12 +35,6 @@ const BookingSchema = new Schema<IBooking>({
 			},
 		},
 	],
-	booking_date: {
-		type: Date,
-	},
-	total_price: {
-		type: Number,
-	},
 });
 
 const Booking = mongoose.model<IBooking>('Booking', BookingSchema);

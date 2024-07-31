@@ -7,6 +7,7 @@ import HotelRouter from './src/route/hotel-route';
 import RoomRouter from './src/route/room-route';
 import ReviewRouter from './src/route/review-route';
 import RestaurantRouter from './src/route/restaurant-route';
+import BookingRouter from './src/route/booking-route';
 
 env.config();
 const port = process.env.PORT || 3000;
@@ -53,6 +54,7 @@ app.use('/hotel', HotelRouter);
 app.use('/room', RoomRouter);
 app.use('/review', ReviewRouter);
 app.use('/restaurant', RestaurantRouter);
+app.use('/booking', BookingRouter);
 
 app.use((err: SystemError, req: express.Request, res: express.Response, next: express.NextFunction) => {
 	res.status(500).send({
