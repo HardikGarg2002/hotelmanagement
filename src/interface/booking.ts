@@ -4,12 +4,12 @@ export interface IBooking {
 	_id?: string;
 	room_slug: string;
 	user_id: string;
+	date: Date;
 	check_in: Date;
 	check_out: Date;
 	total_price: number;
 	status: BookingStatus;
 	guests: IGuest[];
-	booking_date: Date;
 }
 
 export interface IGuest {
@@ -18,10 +18,10 @@ export interface IGuest {
 }
 
 export enum BookingStatus {
-	CONFIRMED,
-	PENDING,
-	CANCELLED,
-	NO_SHOW,
-	CHECKED_IN,
-	CHECKED_OUT,
+	CONFIRMED = 'CONFIRMED',
+	PENDING = 'PENDING',
+	CANCELLED = 'CANCELLED',
+	NO_SHOW = 'NO_SHOW',
+	CHECKED_IN = 'CHECKED_IN',
+	CHECKED_OUT = 'CHECKED_OUT',
 }
