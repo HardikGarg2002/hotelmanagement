@@ -11,6 +11,14 @@ export interface IRestaurant {
 	images: string[];
 	opening_hours: string;
 	menu: IMenuItem[]; // menu will be a separate collection
+	floors: {
+		floor_number: number;
+		tables: {
+			table_number: number;
+			seats: number;
+			status: 'AVAILABLE' | 'RESERVED' | 'OCCUPIED';
+		}[];
+	}[];
 }
 
 export enum RestaurantType {
