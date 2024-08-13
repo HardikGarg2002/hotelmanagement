@@ -1,0 +1,9 @@
+@url = http://localhost:6005/api/room
+
+
+
+###
+GET {{url}}
+Content-Type: application/json
+
+

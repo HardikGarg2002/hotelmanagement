@@ -50,11 +50,11 @@ app.get('/health', (req, res) => {
 });
 app.get('/', (req, res) => res.send('Express on Vercel'));
 
-app.use('/hotel', HotelRouter);
-app.use('/room', RoomRouter);
-app.use('/review', ReviewRouter);
-app.use('/restaurant', RestaurantRouter);
-app.use('/booking', BookingRouter);
+app.use('/api/hotel', HotelRouter);
+app.use('/api/room', RoomRouter);
+app.use('/api/review', ReviewRouter);
+app.use('/api/restaurant', RestaurantRouter);
+app.use('/api/booking', BookingRouter);
 
 app.use((err: SystemError, req: express.Request, res: express.Response, next: express.NextFunction) => {
 	res.status(500).send({
