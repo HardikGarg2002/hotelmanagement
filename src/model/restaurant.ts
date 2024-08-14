@@ -1,5 +1,4 @@
 import { IRestaurant, RestaurantType } from '../interface/restaurant';
-
 import mongoose, { Schema } from 'mongoose';
 
 const RestaurantSchema = new Schema<IRestaurant>({
