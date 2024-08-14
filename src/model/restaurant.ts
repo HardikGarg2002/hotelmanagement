@@ -3,6 +3,10 @@ import { IRestaurant, RestaurantType } from '../interface/restaurant';
 import mongoose, { Schema } from 'mongoose';
 
 const RestaurantSchema = new Schema<IRestaurant>({
+	slug: {
+		type: String,
+		required: true,
+	},
 	title: {
 		type: String,
 		required: true,

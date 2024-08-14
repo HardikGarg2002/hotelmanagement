@@ -1,5 +1,3 @@
-import { ICustomer } from './customer';
-
 export interface IBooking {
 	_id?: string;
 	room_slug: string;
