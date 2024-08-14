@@ -1,12 +1,12 @@
 export interface IReservation {
 	_id?: string;
-	restuarant_slug: string;
+	restaurant_slug: string;
 	table_slug: string;
 	user_id: string;
 	date: Date;
 	status: ReservationStatus;
 	guest_count: number;
-	check_in: Date;
+	reservation_time: Date;
 }
 
 export enum ReservationStatus {
