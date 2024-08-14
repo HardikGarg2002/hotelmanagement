@@ -1,0 +1,5 @@
+@url = http://localhost:6005/api/restaurant
+
+###
+GET {{url}}/
+Content-Type: application/json

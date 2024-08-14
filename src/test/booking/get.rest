@@ -1,0 +1,7 @@
+@url = http://localhost:6005/api/booking
+@id = 66a9ec97b1d1161fab38f7e1
+
+
+###
+GET {{url}}/
+Content-Type: application/json
