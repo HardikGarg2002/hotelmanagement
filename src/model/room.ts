@@ -13,7 +13,7 @@ const RoomSchema = new Schema<IRoom>({
 	},
 	status: {
 		type: String,
-		enum: RoomStatus,
+		enum: Object.values(RoomStatus),
 		default: RoomStatus.AVAILABLE,
 	},
 	room_type: {

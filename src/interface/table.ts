@@ -4,7 +4,7 @@ export interface ITable {
 	slug: string;
 	capacity: number;
 	status: TableStatus;
-	floor: string; // floor
+	floor: number; // floor
 }
 // table for 2, table for 4, table for 6, table for 8, table for 10
 
