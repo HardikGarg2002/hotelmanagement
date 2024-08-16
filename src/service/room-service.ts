@@ -1,4 +1,4 @@
-import { IRoom } from '../interface/room';
+import IRoomMeta, { IRoom } from '../interface/room';
 import Room from '../model/room';
 
 export class RoomService {
@@ -10,9 +10,10 @@ export class RoomService {
 		return room;
 	}
 
-	async get(): Promise<IRoom[]> {
+	async get(): Promise<IRoomMeta> {
 		const rooms = await Room.find();
-		return rooms;
+		const total = rooms.length;
+		return { data: rooms, meta: { total } };
 	}
 
 	async create(data: any): Promise<string> {

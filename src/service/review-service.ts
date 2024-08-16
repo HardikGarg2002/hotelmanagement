@@ -10,9 +10,10 @@ export class ReviewService {
 		return review;
 	}
 
-	async get(): Promise<IReview[]> {
+	async get(): Promise<IReviewMeta> {
 		const reviews = await Review.find();
-		return reviews;
+		const total = reviews.length;
+		return { data: reviews, meta: { total } };
 	}
 	async create(data: any): Promise<string> {
 		const review = new Review(data);

@@ -13,6 +13,12 @@ export interface IRestaurant {
 	menu: IMenuItem[]; // menu will be a separate collection
 }
 
+export interface IRestaurantMeta {
+	data: IRestaurant[];
+	meta: {
+		total: number;
+	};
+}
 export enum RestaurantType {
 	CAFE = 'CAFE',
 	LOUNGE = 'LOUNGE',

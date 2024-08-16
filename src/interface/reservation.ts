@@ -17,3 +17,10 @@ export enum ReservationStatus {
 	CHECKED_IN = 'CHECKED_IN',
 	CHECKED_OUT = 'CHECKED_OUT',
 }
+
+export interface IReservationMeta {
+	data: IReservation[];
+	meta: {
+		total: number;
+	};
+}

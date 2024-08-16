@@ -23,3 +23,10 @@ export enum BookingStatus {
 	CHECKED_IN = 'CHECKED_IN',
 	CHECKED_OUT = 'CHECKED_OUT',
 }
+
+export interface IBookingMeta {
+	data: IBooking[];
+	meta: {
+		total: number;
+	};
+}

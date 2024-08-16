@@ -10,9 +10,10 @@ export class HotelService {
 		return hotel;
 	}
 
-	async get(): Promise<IHotel[]> {
+	async get(): Promise<IHotelMeta> {
 		const hotels = await Hotel.find();
-		return hotels;
+		const total = hotels.length;
+		return { data: hotels, meta: { total } };
 	}
 	async create(data: any): Promise<string> {
 		const hotel = new Hotel(data);
