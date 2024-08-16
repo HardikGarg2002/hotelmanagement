@@ -10,9 +10,10 @@ export class RestaurantService {
 		return restaurant;
 	}
 
-	async get(): Promise<IRestaurant[]> {
+	async get(): Promise<IRestaurantMeta> {
 		const restaurants = await Restaurant.find();
-		return restaurants;
+		const total = restaurants.length;
+		return { data: restaurants, meta: { total } };
 	}
 	async create(data: any): Promise<string> {
 		const restaurant = new Restaurant(data);

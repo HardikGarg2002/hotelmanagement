@@ -15,7 +15,12 @@ export interface IHotel {
 	images: string[];
 	amenities: string[];
 }
-
+export interface IHotelMeta {
+	data: IHotel[];
+	meta: {
+		total: number;
+	};
+}
 export interface IAddress {
 	street: string;
 	city: string;

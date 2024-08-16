@@ -13,3 +13,10 @@ export enum TableStatus {
 	RESERVED = 'RESERVED',
 	OCCUPIED = 'OCCUPIED',
 }
+
+export interface ITableMeta {
+	data: ITable[];
+	meta: {
+		total: number;
+	};
+}

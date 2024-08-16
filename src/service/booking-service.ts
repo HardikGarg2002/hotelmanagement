@@ -8,8 +8,10 @@ export class BookingService {
 		return booking._id;
 	};
 
-	public get = async (): Promise<IBooking[]> => {
-		return await Booking.find();
+	public get = async (): Promise<IBookingMeta> => {
+		const booking = await Booking.find();
+		const total = booking.length;
+		return { data: booking, meta: { total } };
 	};
 
 	public getById = async (id: string): Promise<IBooking> => {

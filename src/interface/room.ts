@@ -22,3 +22,10 @@ export enum RoomStatus {
 	OCCUPIED = 'OCCUPIED',
 	NOT_AVAILABLE = 'NOT_AVAILABLE',
 }
+
+export default interface IRoomMeta {
+	data: IRoom[];
+	meta: {
+		total: number;
+	};
+}
