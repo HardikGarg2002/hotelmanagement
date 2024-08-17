@@ -1,4 +1,4 @@
-import { IRestaurant } from '../interface/restaurant';
+import { IRestaurant, IRestaurantMeta } from '../interface/restaurant';
 import Restaurant from '../model/restaurant';
 
 export class RestaurantService {

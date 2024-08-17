@@ -1,4 +1,4 @@
-import { IReview } from '../interface/review';
+import { IReview, IReviewMeta } from '../interface/review';
 import Review from '../model/review';
 
 export class ReviewService {

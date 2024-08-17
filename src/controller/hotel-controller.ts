@@ -1,5 +1,5 @@
 import { HotelService } from '../service/hotel-service';
-import { IHotel } from '../interface/hotel';
+import { IHotel, IHotelMeta } from '../interface/hotel';
 
 export default class HotelController {
 	private hotelService: HotelService;
@@ -13,7 +13,7 @@ export default class HotelController {
 		return await this.hotelService.create(inputHotel);
 	};
 
-	public get = async (): Promise<IHotel[]> => {
+	public get = async (): Promise<IHotelMeta> => {
 		// Call the service layer to get the hotel
 		return await this.hotelService.get();
 	};

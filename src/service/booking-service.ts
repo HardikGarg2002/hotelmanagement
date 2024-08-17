@@ -1,4 +1,4 @@
-import { IBooking } from '../interface/booking';
+import { IBooking, IBookingMeta } from '../interface/booking';
 import Booking from '../model/booking';
 
 export class BookingService {
