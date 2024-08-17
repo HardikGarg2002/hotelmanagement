@@ -24,3 +24,10 @@ export enum ReviewFor {
 	ROOM = 'ROOM',
 	RESTAURANT = 'RESTAURANT',
 }
+
+export interface IReviewMeta {
+	data: IReview[];
+	meta: {
+		total: number;
+	};
+}

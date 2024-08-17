@@ -1,4 +1,4 @@
-import { IRoom } from '../interface/room';
+import IRoomMeta, { IRoom } from '../interface/room';
 import { RoomService } from '../service/room-service';
 
 export default class RoomController {
@@ -13,7 +13,7 @@ export default class RoomController {
 		return await this.roomService.create(inputRoom);
 	};
 
-	public get = async (): Promise<IRoom[]> => {
+	public get = async (): Promise<IRoomMeta> => {
 		// Call the service layer to get the room
 		return await this.roomService.get();
 	};

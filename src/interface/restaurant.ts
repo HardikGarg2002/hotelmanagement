@@ -19,6 +19,7 @@ export interface IRestaurantMeta {
 		total: number;
 	};
 }
+
 export enum RestaurantType {
 	CAFE = 'CAFE',
 	LOUNGE = 'LOUNGE',

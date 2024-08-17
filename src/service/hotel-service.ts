@@ -1,4 +1,4 @@
-import { IHotel } from '../interface/hotel';
+import { IHotel, IHotelMeta } from '../interface/hotel';
 import Hotel from '../model/hotel'; // Assuming you have a Hotel model defined
 
 export class HotelService {

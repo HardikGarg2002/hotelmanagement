@@ -1,5 +1,5 @@
 import { ReviewService } from '../service/review-service';
-import { IReview } from '../interface/review.js';
+import { IReview, IReviewMeta } from '../interface/review.js';
 
 export default class ReviewController {
 	private reviewService: ReviewService;
@@ -13,7 +13,7 @@ export default class ReviewController {
 		return await this.reviewService.create(inputReview);
 	};
 
-	public get = async (): Promise<IReview[]> => {
+	public get = async (): Promise<IReviewMeta> => {
 		// Call the service layer to get the review
 		return await this.reviewService.get();
 	};

@@ -1,5 +1,5 @@
 import { RestaurantService } from '../service/restaurant-service';
-import { IRestaurant } from '../interface/restaurant';
+import { IRestaurant, IRestaurantMeta } from '../interface/restaurant';
 
 export default class RestaurantController {
 	private restaurantService: RestaurantService;
@@ -13,7 +13,7 @@ export default class RestaurantController {
 		return await this.restaurantService.create(inputRestaurant);
 	};
 
-	public get = async (): Promise<IRestaurant[]> => {
+	public get = async (): Promise<IRestaurantMeta> => {
 		// Call the service layer to get the restaurant
 		return await this.restaurantService.get();
 	};
