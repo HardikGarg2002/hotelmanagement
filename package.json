@@ -4,9 +4,9 @@
   "description": "This handles listing of hotel and rooms within for customer booking",
   "main": "index.ts",
   "scripts": {
+    "build": "tsc",
     "start": "npm run build && node dist/index.js",
     "dev": "nodemon index.ts",
-    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
