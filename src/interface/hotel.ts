@@ -33,11 +33,3 @@ export interface IContactInfo {
 	phone: string;
 	email: string;
 }
-
-export interface Reservation {
-	res_no: number;
-	customer: ICustomer;
-	// room: IRoom;
-	checkInDate: Date;
-	checkOutDate: Date;
-}
