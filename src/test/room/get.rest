@@ -1,9 +1,12 @@
 @url = http://localhost:6005/api/room
 
 
-
 ###
 GET {{url}}
+
+
+###
+GET {{url}}?filter[slug][eq]=Stanza_room_1
 Content-Type: application/json
 
 

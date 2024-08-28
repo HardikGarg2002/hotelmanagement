@@ -1,3 +1,4 @@
+import { buildQuery } from 'filter-library';
 import IRoomMeta, { IRoom } from '../interface/room';
 import Room from '../model/room';
 
@@ -10,8 +11,10 @@ export class RoomService {
 		return room;
 	}
 
-	async get(): Promise<IRoomMeta> {
-		const rooms = await Room.find();
+	async get(filters: any): Promise<IRoomMeta> {
+		const criteria = buildQuery(filters, ['status', 'slug']);
+
+		const rooms = await Room.find(criteria);
 		const total = rooms.length;
 		return { data: rooms, meta: { total } };
 	}
