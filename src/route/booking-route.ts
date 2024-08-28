@@ -1,5 +1,6 @@
 import express from 'express';
 import * as bookingHandler from '../handler/booking-handler';
+import { authorizer } from '../middleware/authorizer';
 const router = express.Router();
 
 // GET /bookings
@@ -9,7 +10,7 @@ router.get('/', bookingHandler.get);
 router.get('/:id', bookingHandler.getById);
 
 // POST /bookings
-router.post('/', bookingHandler.create);
+router.post('/', authorizer, bookingHandler.create);
 
 // PUT /bookings/:id
 router.patch('/:id', bookingHandler.patch);

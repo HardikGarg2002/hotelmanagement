@@ -1,5 +1,6 @@
-@url = http://localhost:6001/booking
+@url = http://localhost:6005/api/booking
 @id = 66a9ec97b1d1161fab38f7e1
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJiODdiMjgzZGE1OTRmODJjNzZhNmQiLCJpYXQiOjE3MDgzMzI0NjYsImV4cCI6MTcxMTg5ODg2Nn0.XkzmVb4w6BdqurNIYTYttp0SEdFu8bTrWFJJhCMreWA
 
 
 ###
@@ -9,20 +10,22 @@ Content-Type: application/json
 ###
 POST {{url}}/
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-  "room_slug": "leela-standard-101",
-  "user_id": "64c7cfa16f5e2e3a9b5f4e1d",
-  "check_in": "2021-12-01",
-  "check_out": "2021-12-03",
-  "guests": [
-    {
-      "name": "John Doe",
-      "age": 30
+    "room_slug": "the-leela-palace-business-suite-501",
+    "date": "2024-08-26T16:00:00Z",
+    "check_in": "2024-09-03T14:00:00Z",
+    "check_out": "2024-09-07T12:00:00Z",
+    "total_price": 80000,
+    "guests": [
+      {
+        "name": "Anil Mehta",
+        "age": 40
       },
       {
-      "name": "Jane Doe",
-      "age":12}],
-  "total_price": 10000
-
-}
+        "name": "Rita Mehta",
+        "age": 38
+      }
+    ]
+  }

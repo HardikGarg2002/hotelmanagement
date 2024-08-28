@@ -13,9 +13,9 @@ export default class RoomController {
 		return await this.roomService.create(inputRoom);
 	};
 
-	public get = async (): Promise<IRoomMeta> => {
+	public get = async (filters: any): Promise<IRoomMeta> => {
 		// Call the service layer to get the room
-		return await this.roomService.get();
+		return await this.roomService.get(filters);
 	};
 
 	public getById = async (id: string): Promise<IRoom> => {
