@@ -6,7 +6,7 @@ GET {{url}}
 
 
 ###
-GET {{url}}?filter[slug][eq]=Stanza_room_1
+GET {{url}}?filters[slug][eq]=Stanza_room_1
 Content-Type: application/json
 
 
