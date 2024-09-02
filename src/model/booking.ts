@@ -2,10 +2,6 @@ import mongoose, { Schema } from 'mongoose';
 import { BookingStatus, IBooking } from '../interface/booking';
 
 const BookingSchema = new Schema<IBooking>({
-	room_slug: {
-		type: String,
-		required: true,
-	},
 	user_id: { type: String },
 	date: {
 		type: Date,
@@ -31,6 +27,20 @@ const BookingSchema = new Schema<IBooking>({
 				type: String,
 			},
 			age: {
+				type: Number,
+			},
+		},
+	],
+	rooms: [
+		{
+			room_id: false,
+			room_slug: {
+				type: String,
+			},
+			room_type: {
+				type: String,
+			},
+			room_price: {
 				type: Number,
 			},
 		},

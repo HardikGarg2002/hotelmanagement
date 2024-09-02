@@ -1,6 +1,5 @@
 export interface IBooking {
 	_id?: string;
-	room_slug: string;
 	user_id: string;
 	date: Date;
 	check_in: Date;
@@ -8,6 +7,12 @@ export interface IBooking {
 	total_price: number;
 	status: BookingStatus;
 	guests: IGuest[];
+	rooms: {
+		room_id: string;
+		room_slug: string;
+		room_type: string;
+		room_price: number;
+	}[];
 }
 
 export interface IGuest {

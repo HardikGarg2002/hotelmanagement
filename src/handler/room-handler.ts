@@ -5,7 +5,7 @@ const roomController = new RoomController();
 
 export async function get(req: Request, res: Response, next: NextFunction) {
 	try {
-		const filter = req.query.filter as Record<string, any>;
+		const filter = req.query.filters as Record<string, any>;
 		const room = await roomController.get(filter);
 		res.json(room);
 	} catch (error) {
