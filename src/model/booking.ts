@@ -33,7 +33,9 @@ const BookingSchema = new Schema<IBooking>({
 	],
 	rooms: [
 		{
-			room_id: false,
+			room_id: {
+				type: String,
+			},
 			room_slug: {
 				type: String,
 			},

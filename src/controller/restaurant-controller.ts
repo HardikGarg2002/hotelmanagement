@@ -1,5 +1,6 @@
 import { RestaurantService } from '../service/restaurant-service';
 import { IRestaurant, IRestaurantMeta } from '../interface/restaurant';
+import { Filters } from 'filter-library';
 
 export default class RestaurantController {
 	private restaurantService: RestaurantService;
@@ -13,9 +14,9 @@ export default class RestaurantController {
 		return await this.restaurantService.create(inputRestaurant);
 	};
 
-	public get = async (): Promise<IRestaurantMeta> => {
+	public get = async (filters: Filters): Promise<IRestaurantMeta> => {
 		// Call the service layer to get the restaurant
-		return await this.restaurantService.get();
+		return await this.restaurantService.get(filters);
 	};
 
 	public getById = async (id: string): Promise<IRestaurant> => {

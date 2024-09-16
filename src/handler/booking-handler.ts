@@ -5,7 +5,8 @@ const bookingController = new BookingController();
 
 export async function get(req: Request, res: Response, next: NextFunction) {
 	try {
-		const booking = await bookingController.get();
+		const filters = req.query.filters as Record<string, any>;
+		const booking = await bookingController.get(filters);
 		res.json(booking);
 	} catch (error) {
 		next(error);

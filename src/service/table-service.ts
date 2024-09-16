@@ -1,5 +1,6 @@
 import Table from '../model/table';
 import { ITable, ITableMeta } from '../interface/table';
+import { buildQuery, Filters } from 'filter-library';
 
 export default class TableService {
 	public create = async (inputTable: Partial<ITable>): Promise<ITable> => {
@@ -7,8 +8,9 @@ export default class TableService {
 		return await table.save();
 	};
 
-	public get = async (): Promise<ITableMeta> => {
-		const tables = await Table.find();
+	public get = async (filters: Filters): Promise<ITableMeta> => {
+		const criteria = buildQuery(filters, ['status', 'slug']);
+		const tables = await Table.find(criteria);
 		const total = tables.length;
 		return { data: tables, meta: { total } };
 	};

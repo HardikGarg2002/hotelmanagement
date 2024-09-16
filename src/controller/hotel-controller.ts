@@ -1,5 +1,6 @@
 import { HotelService } from '../service/hotel-service';
 import { IHotel, IHotelMeta } from '../interface/hotel';
+import { Filters } from 'filter-library';
 
 export default class HotelController {
 	private hotelService: HotelService;
@@ -13,9 +14,9 @@ export default class HotelController {
 		return await this.hotelService.create(inputHotel);
 	};
 
-	public get = async (): Promise<IHotelMeta> => {
+	public get = async (filters: Filters): Promise<IHotelMeta> => {
 		// Call the service layer to get the hotel
-		return await this.hotelService.get();
+		return await this.hotelService.get(filters);
 	};
 
 	public getById = async (id: string): Promise<IHotel> => {

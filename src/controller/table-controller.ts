@@ -1,3 +1,4 @@
+import { Filters } from 'filter-library';
 import { ITableMeta, ITable } from '../interface/table';
 import TableService from '../service/table-service';
 
@@ -13,9 +14,9 @@ export default class TableController {
 		return (await this.tableService.create(inputTable))._id!;
 	};
 
-	public get = async (): Promise<ITableMeta> => {
+	public get = async (filters: Filters): Promise<ITableMeta> => {
 		// Call the service layer to get the table
-		return await this.tableService.get();
+		return await this.tableService.get(filters);
 	};
 
 	public getById = async (id: string): Promise<ITable> => {

@@ -5,7 +5,8 @@ const tableController = new TableController();
 
 export async function get(req: Request, res: Response, next: NextFunction) {
 	try {
-		const table = await tableController.get();
+		const filters = req.query.filters as Record<string, any>;
+		const table = await tableController.get(filters);
 		res.json(table);
 	} catch (error) {
 		next(error);

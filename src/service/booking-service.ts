@@ -1,3 +1,4 @@
+import { buildQuery, Filters } from 'filter-library';
 import { IBooking, IBookingMeta } from '../interface/booking';
 import Booking from '../model/booking';
 
@@ -8,8 +9,9 @@ export class BookingService {
 		return booking._id;
 	};
 
-	public get = async (): Promise<IBookingMeta> => {
-		const booking = await Booking.find();
+	public get = async (filters: Filters): Promise<IBookingMeta> => {
+		const criteria = buildQuery(filters, ['check_in', 'check_out', 'status']);
+		const booking = await Booking.find(criteria);
 		const total = booking.length;
 		return { data: booking, meta: { total } };
 	};
