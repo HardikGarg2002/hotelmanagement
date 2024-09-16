@@ -5,7 +5,8 @@ const hotelController = new HotelController();
 
 export async function get(req: Request, res: Response, next: NextFunction) {
 	try {
-		const hotel = await hotelController.get();
+		const filters = req.query.filters as Record<string, any>;
+		const hotel = await hotelController.get(filters);
 		res.json(hotel);
 	} catch (error) {
 		next(error);

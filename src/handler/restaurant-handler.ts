@@ -5,7 +5,8 @@ const restaurantController = new RestaurantController();
 
 export async function get(req: Request, res: Response, next: NextFunction) {
 	try {
-		const restaurant = await restaurantController.get();
+		const filters = req.query.filters as Record<string, any>;
+		const restaurant = await restaurantController.get(filters);
 		res.json(restaurant);
 	} catch (error) {
 		next(error);

@@ -1,3 +1,4 @@
+import { Filters } from 'filter-library';
 import IRoomMeta, { IRoom } from '../interface/room';
 import { RoomService } from '../service/room-service';
 
@@ -13,7 +14,7 @@ export default class RoomController {
 		return await this.roomService.create(inputRoom);
 	};
 
-	public get = async (filters: any): Promise<IRoomMeta> => {
+	public get = async (filters: Filters): Promise<IRoomMeta> => {
 		// Call the service layer to get the room
 		return await this.roomService.get(filters);
 	};
