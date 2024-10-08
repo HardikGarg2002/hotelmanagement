@@ -1,7 +1,7 @@
 import { buildQuery } from 'filter-library';
 import { IHotel, IHotelMeta } from '../interface/hotel';
 import Hotel from '../model/hotel'; // Assuming you have a Hotel model defined
-import { IFilters } from '../interface/filters';
+import IFilters from '../interface/filters';
 
 export class HotelService {
 	async getById(id: string): Promise<IHotel> {

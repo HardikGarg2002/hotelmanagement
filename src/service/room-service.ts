@@ -1,7 +1,7 @@
 import { buildQuery } from 'filter-library';
 import IRoomMeta, { IRoom } from '../interface/room';
 import Room from '../model/room';
-import { IFilters } from '../interface/filters';
+import IFilters from '../interface/filters';
 
 export class RoomService {
 	async getById(id: string): Promise<IRoom> {

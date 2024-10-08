@@ -1,7 +1,7 @@
 import { buildQuery } from 'filter-library';
 import { IRestaurant, IRestaurantMeta } from '../interface/restaurant';
 import Restaurant from '../model/restaurant';
-import { IFilters } from '../interface/filters';
+import IFilters from '../interface/filters';
 
 export class RestaurantService {
 	async getById(id: string): Promise<IRestaurant> {

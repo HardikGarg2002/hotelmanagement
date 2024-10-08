@@ -1,6 +1,6 @@
 import { BookingService } from '../service/booking-service';
 import { IBooking, IBookingMeta } from '../interface/booking';
-import { IFilters } from '../interface/filters';
+import IFilters from '../interface/filters';
 
 export default class BookingController {
 	private bookingService: BookingService;

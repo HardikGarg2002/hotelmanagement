@@ -1,7 +1,7 @@
 import Table from '../model/table';
 import { ITable, ITableMeta } from '../interface/table';
 import { buildQuery } from 'filter-library';
-import { IFilters } from '../interface/filters';
+import IFilters from '../interface/filters';
 
 export default class TableService {
 	public create = async (inputTable: Partial<ITable>): Promise<ITable> => {
@@ -13,7 +13,7 @@ export default class TableService {
 		const criteria = buildQuery(filters, ['status', 'slug']);
 		const tables = await Table.find(criteria);
 		const total = tables.length;
-		return { data: tables, meta: { total } };
+		return { data: tables, meta: { total, currentPage: 1, totalPages: 1 } };
 	};
 
 	public getById = async (id: string): Promise<ITable> => {

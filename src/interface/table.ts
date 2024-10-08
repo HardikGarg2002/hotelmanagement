@@ -1,3 +1,5 @@
+import { IMetaData } from './metaData';
+
 export interface ITable {
 	_id?: string;
 	restaurant_slug: string;
@@ -16,7 +18,5 @@ export enum TableStatus {
 
 export interface ITableMeta {
 	data: ITable[];
-	meta: {
-		total: number;
-	};
+	meta: IMetaData;
 }

@@ -1,3 +1,3 @@
-import { Filters } from 'filter-library';
+import { IFilters } from 'filter-library';
 
-export interface IFilters extends Filters {}
+export default IFilters;

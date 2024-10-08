@@ -1,7 +1,7 @@
 import { buildQuery } from 'filter-library';
 import { IBooking, IBookingMeta } from '../interface/booking';
 import Booking from '../model/booking';
-import { IFilters } from '../interface/filters';
+import IFilters from '../interface/filters';
 
 export class BookingService {
 	public create = async (inputBooking: Partial<IBooking>): Promise<string> => {
