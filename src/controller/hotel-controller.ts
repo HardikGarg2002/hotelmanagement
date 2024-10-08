@@ -14,7 +14,7 @@ export default class HotelController {
 		return await this.hotelService.create(inputHotel);
 	};
 
-	public get = async (filters: Filters): Promise<IHotelMeta> => {
+	public get = async (filters: IFilters): Promise<IHotelMeta> => {
 		// Call the service layer to get the hotel
 		return await this.hotelService.get(filters);
 	};

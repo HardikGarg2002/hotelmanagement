@@ -14,7 +14,7 @@ export default class RestaurantController {
 		return await this.restaurantService.create(inputRestaurant);
 	};
 
-	public get = async (filters: Filters): Promise<IRestaurantMeta> => {
+	public get = async (filters: IFilters): Promise<IRestaurantMeta> => {
 		// Call the service layer to get the restaurant
 		return await this.restaurantService.get(filters);
 	};

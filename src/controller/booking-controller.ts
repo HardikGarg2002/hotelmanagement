@@ -1,6 +1,6 @@
 import { BookingService } from '../service/booking-service';
 import { IBooking, IBookingMeta } from '../interface/booking';
-import { Filters } from 'filter-library';
+import { IFilters } from '../interface/filters';
 
 export default class BookingController {
 	private bookingService: BookingService;
@@ -14,7 +14,7 @@ export default class BookingController {
 		return await this.bookingService.create(inputBooking);
 	};
 
-	public get = async (filters: Filters): Promise<IBookingMeta> => {
+	public get = async (filters: IFilters): Promise<IBookingMeta> => {
 		// Call the service layer to get the booking
 		return await this.bookingService.get(filters);
 	};

@@ -1,6 +1,7 @@
-import { buildQuery, Filters } from 'filter-library';
+import { buildQuery } from 'filter-library';
 import { IHotel, IHotelMeta } from '../interface/hotel';
 import Hotel from '../model/hotel'; // Assuming you have a Hotel model defined
+import { IFilters } from '../interface/filters';
 
 export class HotelService {
 	async getById(id: string): Promise<IHotel> {
@@ -11,7 +12,7 @@ export class HotelService {
 		return hotel;
 	}
 
-	async get(filters: Filters): Promise<IHotelMeta> {
+	async get(filters: IFilters): Promise<IHotelMeta> {
 		const criteria = buildQuery(filters, ['status', 'title', 'slug']);
 		const hotels = await Hotel.find(criteria);
 		const total = hotels.length;

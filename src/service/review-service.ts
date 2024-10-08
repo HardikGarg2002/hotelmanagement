@@ -1,5 +1,6 @@
 import { IReview, IReviewMeta } from '../interface/review';
 import Review from '../model/review';
+import { IFilters } from '../interface/filters';
 
 export class ReviewService {
 	async getById(id: string): Promise<IReview> {

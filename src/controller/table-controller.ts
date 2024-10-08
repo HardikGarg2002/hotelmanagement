@@ -14,7 +14,7 @@ export default class TableController {
 		return (await this.tableService.create(inputTable))._id!;
 	};
 
-	public get = async (filters: Filters): Promise<ITableMeta> => {
+	public get = async (filters: IFilters): Promise<ITableMeta> => {
 		// Call the service layer to get the table
 		return await this.tableService.get(filters);
 	};

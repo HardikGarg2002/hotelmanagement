@@ -1,6 +1,7 @@
-import { buildQuery, Filters } from 'filter-library';
+import { buildQuery } from 'filter-library';
 import { IRestaurant, IRestaurantMeta } from '../interface/restaurant';
 import Restaurant from '../model/restaurant';
+import { IFilters } from '../interface/filters';
 
 export class RestaurantService {
 	async getById(id: string): Promise<IRestaurant> {
@@ -11,7 +12,7 @@ export class RestaurantService {
 		return restaurant;
 	}
 
-	async get(filters: Filters): Promise<IRestaurantMeta> {
+	async get(filters: IFilters): Promise<IRestaurantMeta> {
 		const criteria = buildQuery(filters, ['title', 'slug', 'restaurant_type', 'hotel_slug']);
 		const restaurants = await Restaurant.find(criteria);
 		const total = restaurants.length;
