@@ -14,7 +14,7 @@ export class BookingService {
 		const criteria = buildQuery(filters, ['check_in', 'check_out', 'status']);
 		const booking = await Booking.find(criteria);
 		const total = booking.length;
-		return { data: booking, meta: { total } };
+		return { data: booking, meta: { total, currentPage: 1, totalPages: 0 } };
 	};
 
 	public getById = async (id: string): Promise<IBooking> => {

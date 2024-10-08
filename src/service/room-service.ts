@@ -16,7 +16,7 @@ export class RoomService {
 		const criteria = buildQuery(filters, ['status', 'slug']);
 		const rooms = await Room.find(criteria);
 		const total = rooms.length;
-		return { data: rooms, meta: { total } };
+		return { data: rooms, meta: { total, currentPage: 1, totalPages: 0 } };
 	}
 
 	async create(data: any): Promise<string> {

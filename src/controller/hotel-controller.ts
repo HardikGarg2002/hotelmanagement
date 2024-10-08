@@ -1,6 +1,6 @@
 import { HotelService } from '../service/hotel-service';
 import { IHotel, IHotelMeta } from '../interface/hotel';
-import { Filters } from 'filter-library';
+import { IFilters } from '../interface/filters';
 
 export default class HotelController {
 	private hotelService: HotelService;

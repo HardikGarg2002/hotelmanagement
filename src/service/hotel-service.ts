@@ -16,7 +16,7 @@ export class HotelService {
 		const criteria = buildQuery(filters, ['status', 'title', 'slug']);
 		const hotels = await Hotel.find(criteria);
 		const total = hotels.length;
-		return { data: hotels, meta: { total } };
+		return { data: hotels, meta: { total, currentPage: 1, totalPages: 0 } };
 	}
 	async create(data: any): Promise<string> {
 		const hotel = new Hotel(data);

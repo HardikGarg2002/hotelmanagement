@@ -1,4 +1,4 @@
-import { Filters } from 'filter-library';
+import { IFilters } from '../interface/filters';
 import IRoomMeta, { IRoom } from '../interface/room';
 import { RoomService } from '../service/room-service';
 

@@ -16,7 +16,7 @@ export class RestaurantService {
 		const criteria = buildQuery(filters, ['title', 'slug', 'restaurant_type', 'hotel_slug']);
 		const restaurants = await Restaurant.find(criteria);
 		const total = restaurants.length;
-		return { data: restaurants, meta: { total } };
+		return { data: restaurants, meta: { total, currentPage: 1, totalPages: 0 } };
 	}
 	async create(data: any): Promise<string> {
 		const restaurant = new Restaurant(data);
