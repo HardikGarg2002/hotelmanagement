@@ -1,6 +1,7 @@
 import Table from '../model/table';
 import { ITable, ITableMeta } from '../interface/table';
 import { buildQuery } from 'filter-library';
+import { IFilters } from '../interface/filters';
 
 export default class TableService {
 	public create = async (inputTable: Partial<ITable>): Promise<ITable> => {
