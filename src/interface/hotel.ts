@@ -1,6 +1,7 @@
 // https://github.com/tssovi/grokking-the-object-oriented-design-interview/blob/master/object-oriented-design-case-studies/design-a-hotel-management-system.md
 
 import { ICustomer } from './customer';
+import { IMetaData } from './metaData';
 
 // This hotel will also work as restaurant. So, we can book a table in the hotel.
 export interface IHotel {
@@ -17,9 +18,7 @@ export interface IHotel {
 }
 export interface IHotelMeta {
 	data: IHotel[];
-	meta: {
-		total: number;
-	};
+	meta: IMetaData;
 }
 export interface IAddress {
 	street: string;

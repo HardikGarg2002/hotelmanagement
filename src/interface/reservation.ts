@@ -1,3 +1,5 @@
+import { IMetaData } from './metaData';
+
 export interface IReservation {
 	_id?: string;
 	restaurant_slug: string;
@@ -20,7 +22,5 @@ export enum ReservationStatus {
 
 export interface IReservationMeta {
 	data: IReservation[];
-	meta: {
-		total: number;
-	};
+	meta: IMetaData;
 }

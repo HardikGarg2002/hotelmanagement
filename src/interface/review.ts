@@ -1,3 +1,5 @@
+import { IMetaData } from './metaData';
+
 export interface IReview {
 	_id?: string;
 	user_id: string;
@@ -27,7 +29,5 @@ export enum ReviewFor {
 
 export interface IReviewMeta {
 	data: IReview[];
-	meta: {
-		total: number;
-	};
+	meta: IMetaData;
 }

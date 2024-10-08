@@ -1,3 +1,5 @@
+import { IMetaData } from './metaData';
+
 export interface ICustomer {
 	_id?: string;
 	name: string;
@@ -5,7 +7,5 @@ export interface ICustomer {
 
 export interface ICustomerMeta {
 	data: ICustomer[];
-	meta: {
-		total: number;
-	};
+	meta: IMetaData;
 }
