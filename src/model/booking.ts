@@ -3,7 +3,7 @@ import { BookingStatus, IBooking } from '../interface/booking';
 
 const BookingSchema = new Schema<IBooking>({
 	user_id: { type: String },
-	date: {
+	booking_date: {
 		type: Date,
 		default: Date.now,
 	},
@@ -43,6 +43,9 @@ const BookingSchema = new Schema<IBooking>({
 				type: String,
 			},
 			room_price: {
+				type: Number,
+			},
+			count: {
 				type: Number,
 			},
 		},

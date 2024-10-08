@@ -1,7 +1,9 @@
+import { IMetaData } from './metaData';
+
 export interface IBooking {
 	_id?: string;
 	user_id: string;
-	date: Date;
+	booking_date: Date;
 	check_in: Date;
 	check_out: Date;
 	total_price: number;
@@ -12,6 +14,7 @@ export interface IBooking {
 		room_slug: string;
 		room_type: string;
 		room_price: number;
+		count: number;
 	}[];
 }
 
@@ -31,7 +34,5 @@ export enum BookingStatus {
 
 export interface IBookingMeta {
 	data: IBooking[];
-	meta: {
-		total: number;
-	};
+	meta: IMetaData;
 }
