@@ -1,6 +1,6 @@
 import { RestaurantService } from '../service/restaurant-service';
 import { IRestaurant, IRestaurantMeta } from '../interface/restaurant';
-import { IFilters } from '../interface/filters';
+import IFilters from '../interface/filters';
 
 export default class RestaurantController {
 	private restaurantService: RestaurantService;

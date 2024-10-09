@@ -1,4 +1,4 @@
-import { IFilters } from '../interface/filters';
+import IFilters from '../interface/filters';
 import { ITableMeta, ITable } from '../interface/table';
 import TableService from '../service/table-service';
 
