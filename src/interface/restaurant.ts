@@ -1,4 +1,5 @@
 import { IContactInfo } from './hotel';
+import { IMetaData } from './metaData';
 
 export interface IRestaurant {
 	_id?: string;
@@ -15,9 +16,7 @@ export interface IRestaurant {
 
 export interface IRestaurantMeta {
 	data: IRestaurant[];
-	meta: {
-		total: number;
-	};
+	meta: IMetaData;
 }
 
 export enum RestaurantType {
